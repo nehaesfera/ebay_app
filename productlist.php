@@ -8,7 +8,8 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<GetSellerListRequest xmlns=\"urn:ebay:apis:eBLBaseComponents\">\r\n\t<ErrorLanguage>en_US</ErrorLanguage>\r\n\t<WarningLevel>High</WarningLevel>\r\n<UserID>testuser_deeksha123</UserID>\r\n<GranularityLevel>CustomCode</GranularityLevel>\r\n</GetSellerListRequest>\r\n",
+  CURLOPT_POSTFIELDS => "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<GetSellerListRequest xmlns=\"urn:ebay:apis:eBLBaseComponents\">\n<ErrorLanguage>en_US</ErrorLanguage>\n<WarningLevel>High</WarningLevel>\n<UserID>testuser_deeksha123</UserID>\n<GranularityLevel>CustomCode</GranularityLevel>\n<Pagination>
+<EntriesPerPage>20</EntriesPerPage></Pagination>\n</GetSellerListRequest>\n",
   CURLOPT_HTTPHEADER => array(
     "cache-control: no-cache",
     "x-ebay-api-call-name: GetSellerList",
